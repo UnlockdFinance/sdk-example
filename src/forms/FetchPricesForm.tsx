@@ -5,7 +5,7 @@ import {
   underlyingsAssets,
   UnlockdApi,
   UnlockdEnvironment
-} from "../../../../unlockd-ts";
+} from "../../../unlockd-ts";
 
 export function FetchPricesForm() {
   const api = new UnlockdApi(UnlockdEnvironment.STAGING);

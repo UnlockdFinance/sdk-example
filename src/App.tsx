@@ -10,8 +10,8 @@ import { BorrowSignatureForm } from "./forms/BorrowSignatureForm.tsx";
 import { FetchPricesForm } from "./forms/FetchPricesForm.tsx";
 import { RepaySignatureForm } from "./forms/RepaySignatureForm.tsx";
 import { CreateMarketForm } from "./forms/CreateMarketForm.tsx";
-import { createWallet, getWallet } from "../../../unlockd-ts/src/contractCalls/wallet.ts";
-import { sendNftsToWallet } from "../../../unlockd-ts/src/contractCalls/nftBatchTransfer.ts";
+import { createWallet, getWallet } from "../../unlockd-ts/src/contractCalls/wallet.ts";
+import { sendNftsToWallet } from "../../unlockd-ts/src/contractCalls/nftBatchTransfer.ts";
 import { SendNftsForm } from "./forms/SendNftsForm.tsx";
 
 
@@ -30,7 +30,6 @@ function App() {
     await createWallet({ network: "sepolia" });
     await refreshUnlockdWallet();
   };
-fron
   const refreshUnlockdWallet = async () => {
     const wallets = await getWallet({ network: "sepolia" });
     setUnlockdAccount(wallets);

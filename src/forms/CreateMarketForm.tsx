@@ -6,7 +6,7 @@ import {
   UnderlyingsAsset, underlyingsAssets,
   UnlockdApi,
   UnlockdEnvironment
-} from "../../../../unlockd-ts";
+} from "../../../unlockd-ts";
 
 export function CreateMarketForm({ token }) {
   const api = new UnlockdApi(UnlockdEnvironment.STAGING);

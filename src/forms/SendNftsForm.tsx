@@ -1,5 +1,5 @@
-import { collections, Collections } from "../../../../unlockd-ts";
-import { sendNftsToWallet } from "../../../../unlockd-ts/src";
+import { collections, Collections } from "../../../unlockd-ts";
+import { sendNftsToWallet } from "../../../unlockd-ts/src";
 
 export function SendNftsForm() {
 

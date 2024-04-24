@@ -5,8 +5,8 @@ import {
   underlyingsAssets,
   UnlockdApi,
   UnlockdEnvironment
-} from "../../../../unlockd-ts";
-import { borrow } from "../../../../unlockd-ts/src";
+} from "../../../unlockd-ts";
+import { borrow } from "../../../unlockd-ts/src";
 
 export function BorrowSignatureForm({ token }) {
   const api = new UnlockdApi(UnlockdEnvironment.STAGING);
