@@ -29,7 +29,7 @@ export function BuyNowForm({token}) {
         };
         const response = await api.buyNowSignature(token, params);
         console.log("Signature", response);
-        await buy(data.amount, response);
+        await buy(data.amount, response, {network:'sepolia'});
     };
 
     return (
