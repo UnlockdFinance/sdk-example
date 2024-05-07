@@ -1,8 +1,7 @@
 import {
-    buyNow,
     collections,
     Collections,
-    create, UnderlyingsAsset, underlyingsAssets,
+     UnderlyingsAsset, underlyingsAssets,
     UnlockdApi,
     UnlockdEnvironment
 } from "../../../unlockd-ts";
@@ -29,6 +28,7 @@ export function BuyNowForm({token}) {
         };
         const response = await api.buyNowSignature(token, params);
         console.log("Signature", response);
+        console.log("Amount", data.amount);
         await buy(data.amount, response, {network:'sepolia'});
     };
 
