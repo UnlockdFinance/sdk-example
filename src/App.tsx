@@ -61,7 +61,7 @@ function App() {
           </button>
           <p>Token {token ? "fetched" : "not fetched"}</p>
           Unlockd Wallet
-          {unlockdAccount === null &&
+          {!unlockdAccount  &&
             <>
               <button onClick={refreshUnlockdWallet}>Refresh</button>
               <button onClick={createUnlockdWallet}>Create UnlockdWallet</button>
