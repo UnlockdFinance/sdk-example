@@ -1,6 +1,7 @@
 import {
   cancel
 } from "../../../unlockd-ts";
+import {FetchOrdersButton} from "../components/FetchOrdersButton.tsx";
 
 export function CancelMarketForm() {
 
@@ -39,10 +40,12 @@ export function CancelMarketForm() {
         >
           Cancel
         </button>
+
         <p className="text-center text-sm text-gray-800">
           Result is on the console browser
         </p>
       </form>
+        <FetchOrdersButton/>
 
     </div>);
 }

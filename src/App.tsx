@@ -11,10 +11,10 @@ import { FetchPricesForm } from "./forms/FetchPricesForm.tsx";
 import { RepaySignatureForm } from "./forms/RepaySignatureForm.tsx";
 import { CreateMarketForm } from "./forms/CreateMarketForm.tsx";
 import { createWallet, getWallet } from "../../unlockd-ts/src/contractCalls/wallet.ts";
-import { sendNftsToWallet } from "../../unlockd-ts/src/contractCalls/nftBatchTransfer.ts";
 import { SendNftsForm } from "./forms/SendNftsForm.tsx";
 import {BuyNowForm} from "./forms/BuyNowForm.tsx";
 import {CancelMarketForm} from "./forms/CancelMarketForm.tsx";
+import {BidMarketForm} from "./forms/BidMarketForm.tsx";
 
 
 function App() {
@@ -80,6 +80,7 @@ function App() {
         <CreateMarketForm token={token} />
         <BuyNowForm token={token} />
         <CancelMarketForm />
+        <BidMarketForm  token={token}/>
 
       </div>
       <p>Edit <code>src/App.tsx</code> and save to test HMR</p>
