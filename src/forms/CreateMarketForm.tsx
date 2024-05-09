@@ -32,7 +32,7 @@ export function CreateMarketForm({ token }) {
       startTime: data.startTime,
       endTime: data.endTime,
       debtToSell: data.debtToSell
-    }, response);
+    }, response,{network:'sepolia'});
   };
 
   return (
