@@ -4,7 +4,7 @@ import { createWalletClient, custom } from "viem";
 import { sepolia } from "viem/chains";
 import {
   UnlockdApi,
-  UnlockdEnvironment
+  Chains
 } from "@unlockdfinance/unlockd-ts";
 import { BorrowSignatureForm } from "./forms/BorrowSignatureForm.tsx";
 import { FetchPricesForm } from "./forms/FetchPricesForm.tsx";
@@ -19,7 +19,7 @@ import {BidMarketForm} from "./forms/BidMarketForm.tsx";
 
 function App() {
   const walletClient = createWalletClient({ chain: sepolia, transport: custom(window.ethereum!) });
-  const api = new UnlockdApi(UnlockdEnvironment.STAGING);
+  const api = new UnlockdApi(Chains.Sepolia);
   const [account, setAccount] = useState<any>();
   const [unlockdAccount, setUnlockdAccount] = useState<any>(undefined);
   const [token, setToken] = useState<any>();

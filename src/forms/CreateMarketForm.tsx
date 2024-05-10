@@ -2,14 +2,14 @@ import {
   collections,
   Collections,
   create,
-  OrderType,
   UnderlyingsAsset, underlyingsAssets,
   UnlockdApi,
-  UnlockdEnvironment
+  Chains
 } from "../../../unlockd-ts";
+import {OrderType} from "../../../unlockd-ts/src";
 
 export function CreateMarketForm({ token }) {
-  const api = new UnlockdApi(UnlockdEnvironment.STAGING);
+  const api = new UnlockdApi(Chains.Sepolia);
 
   const fetchSignature = async (event) => {
     event.preventDefault();

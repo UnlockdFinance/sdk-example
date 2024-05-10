@@ -4,11 +4,11 @@ import {
   UnderlyingsAsset,
   underlyingsAssets,
   UnlockdApi,
-  UnlockdEnvironment
+  Chains
 } from "../../../unlockd-ts";
 
 export function RepaySignatureForm({ token }) {
-  const api = new UnlockdApi(UnlockdEnvironment.STAGING);
+  const api = new UnlockdApi(Chains.Sepolia);
 
   const onSubmit = async (event) => {
     event.preventDefault();

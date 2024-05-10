@@ -3,12 +3,12 @@ import {
     Collections,
      UnderlyingsAsset, underlyingsAssets,
     UnlockdApi,
-    UnlockdEnvironment
+    Chains
 } from "../../../unlockd-ts";
 import {buy} from "../../../unlockd-ts/src/contractCalls/buyNow.ts";
 
 export function BuyNowForm({token}) {
-    const api = new UnlockdApi(UnlockdEnvironment.STAGING);
+    const api = new UnlockdApi(Chains.Sepolia);
 
     const fetchSignature = async (event) => {
         event.preventDefault();

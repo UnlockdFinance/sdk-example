@@ -4,12 +4,12 @@ import {
   UnderlyingsAsset,
   underlyingsAssets,
   UnlockdApi,
-  UnlockdEnvironment
+  Chains
 } from "../../../unlockd-ts";
-import { borrow } from "../../../unlockd-ts/src";
+import {borrow} from "../../../unlockd-ts/src";
 
 export function BorrowSignatureForm({ token }) {
-  const api = new UnlockdApi(UnlockdEnvironment.STAGING);
+  const api = new UnlockdApi(Chains.Sepolia);
 
   const fetchBorrowSignature = async (event) => {
     event.preventDefault();

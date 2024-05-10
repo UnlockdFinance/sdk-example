@@ -4,11 +4,11 @@ import {
   UnderlyingsAsset,
   underlyingsAssets,
   UnlockdApi,
-  UnlockdEnvironment
+  Chains
 } from "../../../unlockd-ts";
 
 export function FetchPricesForm() {
-  const api = new UnlockdApi(UnlockdEnvironment.STAGING);
+  const api = new UnlockdApi(Chains.Sepolia);
 
   const fetchPrices = async (event) => {
     event.preventDefault();

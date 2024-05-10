@@ -1,10 +1,10 @@
 import {
-   collections, Collections, marketBid, UnlockdApi, UnlockdEnvironment
+   collections, Collections, marketBid, UnlockdApi, Chains
 } from "../../../unlockd-ts";
 import {FetchOrdersButton} from "../components/FetchOrdersButton.tsx";
 
 export function BidMarketForm({ token }) {
-  const api = new UnlockdApi(UnlockdEnvironment.STAGING);
+  const api = new UnlockdApi(Chains.Sepolia);
 
   const fetchSignature = async (event) => {
     event.preventDefault();
