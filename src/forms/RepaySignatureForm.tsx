@@ -82,7 +82,7 @@ export function RepaySignatureForm({ token }) {
           <label htmlFor="underlyingsAsset" className="sr-only">UnderlyingAsset</label>
 
           <div className="relative">
-            <select name="underlyingsAsset" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm">{
+            <select name="underlyingAsset" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm">{
               Object.values(UnderlyingsAsset).map((underlyingAsset,i) => {
                 return <option key={i}  value={underlyingsAssets("sepolia")[underlyingAsset]}>{underlyingAsset}</option>
               })
