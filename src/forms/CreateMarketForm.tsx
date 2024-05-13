@@ -26,6 +26,17 @@ export function CreateMarketForm({ token }) {
     };
     const response = await api.marketSignature(token, params);
     console.log("Signature", response);
+    console.log("params", {
+      underlyingAsset:data.underlyingAsset,
+      orderTupe:data.orderType, order: {
+      startAmount: data.startAmount,
+      endAmount: data.endAmount,
+      startTime: data.startTime,
+      endTime: data.endTime,
+      debtToSell: data.debtToSell
+    }, sig:response,net:{network:'sepolia'}
+    });
+
     await create(data.underlyingAsset, data.orderType, {
       startAmount: data.startAmount,
       endAmount: data.endAmount,
@@ -91,7 +102,7 @@ export function CreateMarketForm({ token }) {
 
 
           <div className="relative">
-            <select name="underlyingsAsset" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm">
+            <select name="underlyingAsset" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm">
               {
                 Object.values(UnderlyingsAsset).map((underlyingAsset, i) => {
                   return <option key={i}
