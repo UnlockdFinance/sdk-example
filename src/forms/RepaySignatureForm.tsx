@@ -31,7 +31,9 @@ export function RepaySignatureForm({ token }) {
     };
     const response = await api.repaySignature(token, params);
     console.log("Signature", response);
-    await repay(1n, response);
+    await repay(data.amount, response,{
+      network:'sepolia'
+    });
   };
 
   return (
