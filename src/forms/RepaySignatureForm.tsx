@@ -27,8 +27,7 @@ export function RepaySignatureForm({ token }) {
             "collection": data.collection,
             "tokenId": data.tokenId
           }
-        ],
-      "underlyingAsset": data.underlyingAsset
+        ]
     };
     const response = await api.repaySignature(token, params);
     console.log("Signature", response);
@@ -76,18 +75,6 @@ export function RepaySignatureForm({ token }) {
             />
 
 
-          </div>
-        </div>
-        <div>
-          <label htmlFor="underlyingsAsset" className="sr-only">UnderlyingAsset</label>
-
-          <div className="relative">
-            <select name="underlyingAsset" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm">{
-              Object.values(UnderlyingsAsset).map((underlyingAsset,i) => {
-                return <option key={i}  value={underlyingsAssets("sepolia")[underlyingAsset]}>{underlyingAsset}</option>
-              })
-            }
-            </select>
           </div>
         </div>
         <div>
